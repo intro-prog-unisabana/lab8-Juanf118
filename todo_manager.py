@@ -17,5 +17,3 @@ def write_todo_file(file_path, tasks):
     with open(file_path, 'w') as file:
             for task in tasks:
                 file.write(f"{task}\n")
-tasks = read_todo_file("p1e1_todo.txt")
-print(tasks)
