@@ -10,7 +10,6 @@ def read_todo_file(file_path):
     except FileNotFoundError:
         print(f"File '{file_path}' not found! Returning an empty to-do list.")
         return []
-    raise NotImplementedError
 
 
 def write_todo_file(file_path, tasks):
@@ -18,6 +17,5 @@ def write_todo_file(file_path, tasks):
     with open(file_path, 'w') as file:
             for task in tasks:
                 file.write(f"{task}\n")
-    raise NotImplementedError
 tasks = read_todo_file("p1e1_todo.txt")
 print(tasks)
