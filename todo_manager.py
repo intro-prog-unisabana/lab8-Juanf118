@@ -19,5 +19,5 @@ def write_todo_file(file_path, tasks):
             for task in tasks:
                 file.write(f"{task}\n")
     raise NotImplementedError
-tasks = read_todo_file('tasks_example.txt')
+tasks = read_todo_file('p1e1_todo.txt')
 print(tasks)
