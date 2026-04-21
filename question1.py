@@ -1,6 +1,5 @@
 import sys
 
-
 def calculate_load_per_support():
     try:
         total_load_str = sys.argv[1] 
