@@ -9,7 +9,7 @@ def calculate_load_per_support():
         num_supports = float(num_supports_str)
   
         if num_supports == 0:
-            print("Error: Cannot divide by zero! Support must be greater than zero.")
+            print("Error: Cannot divide by zero! Supports must be greater than zero.")
             return 
         
         load_per_support = total_load / num_supports
