@@ -8,7 +8,7 @@ def read_todo_file(file_path):
             return file.read().splitlines()
         
     except FileNotFoundError:
-        print(f"File '{file_path}' not found! Returning an empty to-do list.")
+        print(f"File {file_path} not found! Returning an empty to-do list.")
         return []
 
 
