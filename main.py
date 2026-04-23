@@ -4,7 +4,7 @@ from todo_manager import read_todo_file, write_todo_file
 
 try:
     if len(sys.argv) < 2:
-        raise IndexError ("Insufficient arguments provided!")
+        raise IndexError("Insufficient arguments provided!")
     arguments = sys.argv[1:]
     file = arguments[0]
 
@@ -13,13 +13,11 @@ try:
     print("Command-line arguments:")
     for arg in arguments:
         print(arg)
-    print("\nCurrent tasks:")
+    print("\nTasks:")
     for task in tasks:
         print(task)
 except IndexError as e:
     print(e)
-except Exception as e:
-    print(f"An error occurred: {e}")
 
     
 
