@@ -2,9 +2,26 @@
 import sys 
 from todo_manager import read_todo_file, write_todo_file
 
-def main():
-            try:
-                if len(sys.argv) < 2:
-                 raise IndexError("Insufficient arguments provided!")
+try:
+    if len(sys.argv) < 2:
+        raise IndexError ("Insufficient arguments provided!")
+    arguments = sys.argv[1:]
+    file = arguments[0]
+
+    tasks = read_todo_file(file)
+
+    print("Command-line arguments:")
+    for arg in arguments:
+        print(arg)
+    print("\nCurrent tasks:")
+    for task in tasks:
+        print(task)
+except IndexError as e:
+    print(e)
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+    
+
 
 
