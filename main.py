@@ -59,7 +59,6 @@ Examples:
             else:
                 raise ValueError("Command not found!")
 
-        if changes_made:
             write_todo_file(file_path, tasks)
 
     except (IndexError, ValueError) as e:
