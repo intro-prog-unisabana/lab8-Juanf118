@@ -29,4 +29,42 @@ Examples:
 
         while i < len(sys.argv):
             command = sys.argv[i]
+            if command == "view":
+                print("Tasks:")
+                for t in tasks:
+                    print(t)
+                i += 1 
+
+            elif command == "add":
+                if i + 1 >= len(sys.argv):
+                    raise IndexError('Task description required for "add".')
+                new_task = sys.argv[i + 1]
+                tasks.append(new_task)
+                print(f'Task "{new_task}" added.')
+                changes_made = True
+                i += 2 
+
+            elif command == "remove":
+                if i + 1 >= len(sys.argv):
+                    raise IndexError('Task description required for "remove".')
+                task_to_remove = sys.argv[i + 1]
+                if task_to_remove in tasks:
+                    tasks.remove(task_to_remove)
+                    print(f'Task "{task_to_remove}" removed.')
+                    changes_made = True
+                else:
+                    print(f'Task "{task_to_remove}" not found.')
+                i += 2
+            
+            else:
+                raise ValueError("Command not found!")
+
+        if changes_made:
+            write_todo_file(file_path, tasks)
+
+    except (IndexError, ValueError) as e:
+        print(e)
+
+if __name__ == "__main__":
+    main()
 
