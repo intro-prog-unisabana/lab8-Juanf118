@@ -63,7 +63,7 @@ Examples:
             write_todo_file(file_path, tasks)
 
     except (IndexError, ValueError) as e:
-        print(e)
+            print(e)
 
 if __name__ == "__main__":
     main()
